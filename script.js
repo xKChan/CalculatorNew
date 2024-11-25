@@ -61,8 +61,8 @@ function getAnswer() {
     b = bottomNumber.textContent;
     pickedOpperand = opperand;
     let ans = operate(a, b, pickedOpperand);
-    bottomNumber.textContent = '';
-    topNumber.textContent = ans;
+    bottomNumber.textContent = ans;
+    topNumber.textContent = '';
     console.log(ans);
   });
 }
