@@ -1,0 +1,28 @@
+.calc {
+  display: grid;
+  grid-template-rows: 100px repeat(5, auto);
+  width: 500px;
+  height: 500px;
+}
+
+.display {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  text-align: end;
+}
+
+.span-4 {
+  grid-row-start: 3;
+  grid-row-end: 7;
+  grid-column-start: 4;
+}
+
+.topNum {
+  font-size: 30px;
+  height: 32px;
+}
+
+.botNum {
+  font-size: 60px;
+  height: 69px;
+}

@@ -9,7 +9,7 @@ let b = 0;
 let opperand = '';
 
 function add(a, b) {
-  return a + b;
+  return parseInt(a) + parseInt(b);
 }
 
 function subtract(a, b) {
@@ -50,7 +50,6 @@ function getSecondNumber() {
       opperand = opperandPicked.getAttribute('data-opp');
       topNumber.textContent = bottomNumber.textContent;
       bottomNumber.textContent = '';
-      console.log(opperand);
     });
   });
 }
@@ -63,7 +62,6 @@ function getAnswer() {
     let ans = operate(a, b, pickedOpperand);
     bottomNumber.textContent = ans;
     topNumber.textContent = '';
-    console.log(ans);
   });
 }
 
