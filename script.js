@@ -1,8 +1,9 @@
 const numSelected = document.querySelectorAll('.num');
 const opperandSelected = document.querySelectorAll('.opperand');
-const bottomNumber = document.querySelector('.botNum');
-const topNumber = document.querySelector('.topNum');
 const equalSelected = document.querySelector('.equal');
+const decimalSelected = document.querySelector('.decimal');
+const displayedNumber = document.querySelector('.numberDisplay');
+const clearSelected = document.querySelector('.clear');
 
 let a = 0;
 let b = 0;
@@ -36,43 +37,10 @@ function operate(a, b, opperand) {
   }
 }
 
-function getNum() {
-  numSelected.forEach(num => {
-    num.addEventListener('click', () => {
-      bottomNumber.append(num.getAttribute('data-num'));
-    });
+function clear() {
+  clearSelected.addEventListener('click', () => {
+    displayedNumber.textContent = '';
   });
 }
 
-function getSecondNumber() {
-  opperandSelected.forEach(opperandPicked => {
-    opperandPicked.addEventListener('click', () => {
-      opperand = opperandPicked.getAttribute('data-opp');
-      topNumber.textContent = bottomNumber.textContent;
-      bottomNumber.textContent = '';
-    });
-  });
-}
-
-function getAnswer() {
-  equalSelected.addEventListener('click', () => {
-    a = topNumber.textContent;
-    b = bottomNumber.textContent;
-    pickedOpperand = opperand;
-    let ans = operate(a, b, pickedOpperand);
-    bottomNumber.textContent = ans;
-    topNumber.textContent = '';
-  });
-}
-
-function clearCalc() {
-  document.querySelector('.clear').addEventListener('click', () => {
-    bottomNumber.textContent = '';
-    topNumber.textContent = '';
-  });
-}
-
-getNum();
-clearCalc();
-getSecondNumber();
-getAnswer();
+clear();

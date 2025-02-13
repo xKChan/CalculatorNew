@@ -1,28 +1,53 @@
+body {
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 18px;
+  border-radius: 7px;
+}
+
 .calc {
   display: grid;
-  grid-template-rows: 100px repeat(5, auto);
+  grid-template-rows: 110px repeat(5, auto);
+  grid-template-columns: repeat(4, 123px);
   width: 500px;
   height: 500px;
+  border: 10px grey solid;
+  column-gap: 3px;
+  row-gap: 3px;
+  background-color: grey;
 }
 
 .display {
   grid-column-start: 1;
   grid-column-end: 5;
   text-align: end;
+  background-color: white;
+  border: 3px black solid;
+}
+
+.numberDisplay {
+  font-size: 350%;
+  font-weight: 600;
+  padding: 20px 10px;
+  background-color: beige;
+  height: 60%;
 }
 
 .span-4 {
   grid-row-start: 3;
   grid-row-end: 7;
   grid-column-start: 4;
+  background-color: lightgreen;
 }
 
-.topNum {
-  font-size: 30px;
-  height: 32px;
+.num,
+.decimal,
+.clear {
+  background-color: lightblue;
 }
 
-.botNum {
-  font-size: 60px;
-  height: 69px;
+.opperand {
+  background-color: aquamarine;
 }
