@@ -27,12 +27,24 @@ button {
   border: 3px black solid;
 }
 
-.numberDisplay {
+/* .numberDisplay {
   font-size: 350%;
   font-weight: 600;
   padding: 20px 10px;
   background-color: beige;
   height: 60%;
+} */
+
+.bottomDisplay {
+  height: 60px;
+  background-color: yellow;
+  font-size: 300%;
+}
+
+.topDisplay {
+  background-color: red;
+  height: 40px;
+  font-size: 200%;
 }
 
 .span-4 {
